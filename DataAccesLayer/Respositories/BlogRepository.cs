@@ -19,6 +19,11 @@ namespace DataAccesLayer.Respositories
             a.SaveChanges();
         }
 
+        public void Delete(Blog T)
+        {
+            throw new NotImplementedException();
+        }
+
         public void DeleteBlog(Blog blog)
         {
             a.Remove(blog);
@@ -30,9 +35,24 @@ namespace DataAccesLayer.Respositories
             return a.Blogs.Find(id);
         }
 
+        public List<Blog> getListAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void insert(Blog t)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Blog> ListAllBlog()
         {
             return a.Blogs.ToList();
+        }
+
+        public void Update(Blog t)
+        {
+            throw new NotImplementedException();
         }
 
         public void UpdateBlog(Blog blog)

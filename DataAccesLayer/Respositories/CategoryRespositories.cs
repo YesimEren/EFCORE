@@ -21,6 +21,11 @@ namespace DataAccesLayer.Respositories
             
         }
 
+        public void Delete(Category T)
+        {
+            throw new NotImplementedException();
+        }
+
         public void DeleteCategory(Category category)
         {
             c.Remove(category);
@@ -32,9 +37,24 @@ namespace DataAccesLayer.Respositories
             return c.Categories.Find(id);
         }
 
+        public List<Category> getListAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void insert(Category t)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Category> ListAllCategory() //geri dönen değer ister
         {
             return c.Categories.ToList();
+        }
+
+        public void Update(Category t)
+        {
+            throw new NotImplementedException();
         }
 
         public void UpdateCategory(Category category)

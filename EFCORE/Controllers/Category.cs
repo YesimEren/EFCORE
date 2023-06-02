@@ -1,12 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BusinessLayer.Concrete;
+using DataAccesLayer.Abstract;
+using DataAccesLayer.EntityFramework;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EFCORE.Controllers
 {
-    public class Category : Controller
+    public class Category : Controller // Burada Kategory sınıfından değer türeteceğiz
     {
-        public IActionResult Index()
+        CategoryManager cm = new CategoryManager(new EfCategoryRepository()); // bütün methodlara erişim sağlayacağım
+        
+
+        public IActionResult Index() 
         {
-            return View();
+            var values = cm.GetList();
+            return View(values);
         }
     }
 }
+ 
